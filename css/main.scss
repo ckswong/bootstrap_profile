@@ -1,0 +1,79 @@
+---
+---
+
+@import 'bootstrap/bootstrap';
+
+body {
+  font-family: $body-font;
+}
+
+.wrapper {
+  background-image: url('/assets/paper_texture.jpg');
+  min-height: 100vh;
+}
+
+#header {
+  .nav {
+    height: 100px;
+    align-items: center;
+    a {
+      color: $red-primary;
+      font-family: $heading-font;
+      text-transform: uppercase;
+      font-size: 22px;
+      &:hover {
+        text-decoration: underline;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+#about {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+  .splash {
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 30px 0;
+    &__image {
+      height: 300px;
+      width: 300px;
+      border-radius: 150px;
+      margin-bottom: 30px;
+    }
+    &__name {
+      font-family: $heading-font;
+      text-transform: uppercase;
+      color: $red-primary;
+    }
+    &__description {
+      font-family: $body-font;
+      max-width: 460px;
+    }
+    &__location {
+      font-family: $body-font;
+      span {
+        margin: 0 0 0 3px;
+      }
+      // i {
+      //   color: #c31;
+      // }
+      svg {
+        path {
+          fill: $red-primary
+        }
+      }
+    }
+  }
+}
+
+
