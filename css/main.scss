@@ -5,11 +5,20 @@
 
 body {
   font-family: $body-font;
+  color: $black-primary;
 }
 
 .wrapper {
   background-image: url('/assets/paper_texture.jpg');
   min-height: 100vh;
+  //overrides
+  a {
+    color: $red-primary;
+    &:hover {
+      text-decoration: underline;
+      opacity: 0.8;
+    }
+  }
 }
 
 #header {
@@ -17,14 +26,9 @@ body {
     height: 100px;
     align-items: center;
     a {
-      color: $red-primary;
       font-family: $heading-font;
       text-transform: uppercase;
       font-size: 22px;
-      &:hover {
-        text-decoration: underline;
-        opacity: 0.8;
-      }
     }
   }
 }
@@ -37,12 +41,6 @@ body {
   align-items: center;
   padding-bottom: 30px;
   .splash {
-    flex-grow: 1;
-    text-align: center;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
     padding: 0 0 30px 0;
     &__image {
       height: 300px;
@@ -64,9 +62,6 @@ body {
       span {
         margin: 0 0 0 3px;
       }
-      // i {
-      //   color: #c31;
-      // }
       svg {
         path {
           fill: $red-primary
@@ -76,4 +71,59 @@ body {
   }
 }
 
+#contact {
+  .mail-icon {
+    margin-top: 10px;
+    h1 {
+      text-align: center;
+      font-size: 100px;
+    }
+  }
+  .blurb {
+    text-align: center;
+  }
+}
 
+#form {
+  label {
+    text-transform: uppercase;
+    font-family: $heading-font;
+    color: $red-primary;
+    font-size: 20px;
+  }
+  input::placeholder {
+    color: #D3D3D3;
+    font-weight: normal;
+  }
+  .btn-primary {
+    text-transform: uppercase;
+    font-family: $heading-font;
+  }
+}
+
+#blog {
+  .blurb {
+    margin-top: 10px;
+    h1, p {
+      text-align: center;
+    }
+    h1 {
+      font-size: 100px;
+    }
+  }
+  .posts {
+    .card {
+      background-color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 15px;
+      .card-title {
+        font-family: $heading-font;
+        text-transform: uppercase;
+        color: $red-primary;
+      }
+      .card-subtitle {
+        font-weight: 400;
+        font-size: 0.875em;
+      }
+    }
+  }
+}

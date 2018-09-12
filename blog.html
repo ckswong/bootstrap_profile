@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div id="blog" class="container">
+    <div class="row blurb">
+      <div class="col">
+        <h1>💭</h1>
+        <p>Here are some of my musings on technology and design. Enjoy!</p>
+      </div>
+    </div>
+    <hr>
+
+  {% for post in site.posts %}
+    <div class="row posts">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            {% if post.subtitle %}
+              <h6 class="card-subtitle mb-3 text-muted">{{ post.subtitle }}</h6>
+            {% endif %}
+            <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="card-link float-right">...Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+
+</div>
