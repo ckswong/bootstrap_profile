@@ -139,3 +139,29 @@ body {
 #disqus_thread {
   background-color: white;
 }
+
+#projects {
+  .blurb {
+    text-align: center;
+  }
+  .fa-th {
+    font-size: 60px;
+    margin-bottom: 20px;
+    path {
+      color: $red-primary;
+    }
+  }
+  .tiles {
+    a {
+      text-decoration: none;
+    }
+    .card-title {
+      text-transform: uppercase;
+      font-family: $heading-font;
+    }
+    .card-text {
+      color: $black-primary;
+    }
+
+  }
+}
