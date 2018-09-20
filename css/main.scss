@@ -136,6 +136,19 @@ body {
   }
 }
 
+#post {
+  h2 {
+    text-align: center;
+    margin: auto;
+  }
+  p.robinhood {
+    margin: 20px auto auto;
+  }
+  img {
+    margin: 20px auto;
+  }
+}
+
 #disqus_thread {
   background-color: white;
 }
