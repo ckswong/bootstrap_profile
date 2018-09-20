@@ -128,7 +128,7 @@ body {
   }
 }
 
-#post {
+#post, #projects {
   h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     font-family: $heading-font;
@@ -152,12 +152,31 @@ body {
     }
   }
   .tiles {
+    text-align: center;
+    .col {
+      max-width: 768px;
+      margin: auto;
+    }
+    .card {
+      margin-bottom: 20px;
+      background-color: black;
+      border: none;
+    }
     a {
       text-decoration: none;
     }
     .card-title {
       text-transform: uppercase;
       font-family: $heading-font;
+    }
+    .card-body {
+      background-color: white;
+    }
+    .card-img-top {
+      background-color: black;
+      opacity: 0.6;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
     }
     .card-text {
       color: $black-primary;
